@@ -1,0 +1,32 @@
+{
+  "name": "spotify-cli-utils",
+  "version": "0.1.0",
+  "description": "Useful Spotify utilities for your terminal",
+  "type": "module",
+  "bin": {
+    "spotify-cli-utils": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "tsx --test src/lib/shuffle.test.ts src/spotify/client.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "7.8.6",
+    "commander": "14.0.0",
+    "open": "10.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}
